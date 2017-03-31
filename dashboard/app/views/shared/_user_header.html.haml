@@ -5,8 +5,8 @@
       %span= t('nav.user.label', username: t('nav.user.team'))
     - else
       %span= t('nav.user.label', username: h(current_user.short_name))
-    %span.user_menu_glyph
-      &#x25BC;
+    &nbsp;
+    %i.fa.fa-caret-down
     %div{style: 'position: relative; top: 3px;'}
       .user_options{style: 'display: none;'}
         - if current_user.teacher?
@@ -42,14 +42,25 @@
 
 :javascript
   function hideUserOptions() {
-    $('.user_options').hide();
+    // hide
+    //$('.user_options').slideToggle();
+    $('.user_options').find('a:visible').each(function(i) {
+      $(this).delay((4-i)*50).animate({opacity: 0}, 400);
+      if (i == 4)
+        $('.user_options').delay(800).hide(0);
+    });
+
     $('.user_menu_glyph').html('&#x25BC;');
     $(document).off('click', hideUserOptions);
   }
   $('.user_menu').click(function (e) {
     if ($('.user_options').is(':hidden')) {
       e.stopPropagation();
-      $('.user_options').show();
+
+      // show
+      //$('.user_options').slideToggle();
+      $('.user_options').show().find('a:visible').each(function(i) { $(this).delay(i*50).animate({opacity: 1}, 400);  });
+
       $('.user_menu_glyph').html('&#x25B2;');
       $(document).on('click', hideUserOptions);
     }

@@ -637,7 +637,7 @@ button {
   margin-left:5%;
 }
 
-.user_menu { /* copied from dashboard's .header-button */
+.user_menu_signedout { /* copied from dashboard's .header-button */
   color: white;
   display: inline-block;
   background-color: #ffa400;
@@ -648,6 +648,22 @@ button {
   box-sizing: border-box;
   cursor: pointer;
   margin-top: -6px;
+  a:hover {
+    text-decoration: none;
+    background-color: #ffa400;
+  }
+}
+
+.user_menu { /* should be copied from dashboard's .header-button */
+  color: white;
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 7px 14px;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
   a:hover {
     text-decoration: none;
     background-color: #ffa400;

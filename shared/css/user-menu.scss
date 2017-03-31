@@ -2,10 +2,11 @@
 @import 'font';
 
 .user_menu {
+  user-select: none;
   padding: 7px 14px;
   .user_options {
-    background-color: white;
-    border: 1px solid $charcoal;
+    xbackground-color: white;
+    xborder: 1px solid $charcoal;
     z-index: 100001;
     text-align: left;
     white-space: nowrap;
@@ -16,6 +17,8 @@
 
     a {
       display: block;
+      opacity: 0;
+      background-color: rgba(255,255,255,0.8);
       padding: 10px;
       font-family: $gotham-bold;
       color: $charcoal;
