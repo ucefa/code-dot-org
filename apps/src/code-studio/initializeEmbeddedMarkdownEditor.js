@@ -21,9 +21,10 @@ marked.setOptions({
  *
  * For a non DSL element, use initializeCodeMirror
  *
- * @param {jQuery} embeddedElement - textarea element within which to embed the markdown
+ * @param {jQuery} embeddedElement - textarea element within which to embed the
+ *   markdown.
  * @param {string} markdownTextArea - id (which will be prefixed by "level_")
- *                                  of textarea where editor will live
+ *   of textarea where editor will live
  * @param {string} markdownProperty - name of the property within the textarea
  */
 export default function initializeEmbeddedMarkdownEditor(embeddedElement,

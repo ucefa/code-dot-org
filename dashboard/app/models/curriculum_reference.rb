@@ -44,4 +44,8 @@ class CurriculumReference < Level
     return nil unless properties['reference']
     "/docs#{properties['reference']}"
   end
+
+  def supports_markdown?
+    true
+  end
 end
