@@ -1,0 +1,14 @@
+- content_for(:head) do
+  %script{src: minifiable_asset_path('js/levelbuilder_markdown.js')}
+
+.markdown
+  %p Edit Markdown:
+
+  %textarea#level_markdown_textarea
+  #level_markdown_textarea_preview
+
+.markdown.teacher
+  %p Edit Teacher Only Markdown:
+
+  %textarea#level_teacher_markdown_textarea
+  #level_teacher_markdown_textarea_preview
