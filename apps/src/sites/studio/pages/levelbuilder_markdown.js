@@ -18,15 +18,15 @@ $(document).ready(function () {
   if (markdown.dsl) {
     initializeEmbeddedMarkdownEditor(
       $('#level_dsl_text'),
-      'level_markdown_textarea',
+      'level_markdown',
       'markdown');
     initializeEmbeddedMarkdownEditor(
       $('#level_dsl_text'),
-      'level_teacher_markdown_textarea',
+      'level_teacher_markdown',
       'teacher_markdown');
   } else {
-    const markdown = document.getElementById('level_markdown_textarea');
-    const teacherMarkdown = document.getElementById('level_teacher_markdown_textarea');
+    const markdown = document.getElementById('level_markdown');
+    const teacherMarkdown = document.getElementById('level_teacher_markdown');
     if (markdown) {
       initializeCodeMirror(markdown, 'markdown');
     }
