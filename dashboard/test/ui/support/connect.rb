@@ -63,7 +63,8 @@ def saucelabs_browser
       http_client.send(:http).idle_timeout = 3
     rescue StandardError
       raise if retries >= MAX_CONNECT_RETRIES
-      puts 'Failed to get browser, retrying...'
+      puts "Failed to get browser, waiting #{5 * 2**retries} seconds then retrying..."
+      sleep(5 * 2**retries)
       retries += 1
       retry
     end
