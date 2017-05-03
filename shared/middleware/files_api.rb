@@ -477,9 +477,15 @@ class FilesApi < Sinatra::Base
       manifest = JSON.load manifest_result[:body]
     end
 
-    # store the new file
+    # store the new file (possibly copied from an existing file)
     if params['src']
-      new_entry_json = copy_file('files', encrypted_channel_id, filename.downcase, params['src'])
+      if filename.downcase == params['src']
+        # The rename is a case-only rename. As the filename is downcased on s3, there is no need to
+        # update s3.
+        new_entry_json = manifest.detect {|e| e['filename'].downcase == filename.downcase}.to_json
+      else
+        new_entry_json = copy_file('files', encrypted_channel_id, filename.downcase, params['src'])
+      end
     else
       new_entry_json = put_file('files', encrypted_channel_id, filename.downcase, body)
     end
