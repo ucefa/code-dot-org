@@ -4,7 +4,7 @@ import color from "../../util/color";
 
 const styles = {
   section: {
-    width: 960,
+    width: 940,
     marginBottom: 50,
   },
   heading: {
@@ -17,7 +17,7 @@ const styles = {
     fontFamily: '"Gotham 3r", sans-serif',
     zIndex: 2,
     color: color.charcoal,
-    width: 960
+    width: 940
   },
   arrowIcon: {
     paddingRight: 8

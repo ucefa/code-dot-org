@@ -5,7 +5,7 @@ import ProgressButton from '../progress/ProgressButton';
 const styles = {
   container: {
     height: 250,
-    width: 960,
+    width: 940,
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.border_gray,
@@ -14,7 +14,7 @@ const styles = {
     marginLeft: 25
   },
   tealBar: {
-    width: 960,
+    width: 940,
     height: 72,
     backgroundColor: color.light_teal,
   },

@@ -12,7 +12,7 @@ const styles = {
     border: '1px solid gray',
     position: 'relative',
     height: 245,
-    width: 448,
+    width: 420,
     marginLeft: 25,
     float: 'left'
   },
@@ -27,7 +27,7 @@ const styles = {
   },
   image: {
     position: 'absolute',
-    width: 465
+    width: 420
   },
   courseName: {
     paddingLeft: 25,
@@ -54,7 +54,7 @@ const styles = {
     color: color.gray,
     background: color.white,
     height: 130,
-    width: 465,
+    width: 400,
     position: 'absolute',
     zIndex: 2,
   },
@@ -63,7 +63,7 @@ const styles = {
     zIndex: 3,
     fontSize: 18,
     color: color.white,
-    marginLeft: 400,
+    marginLeft: 350,
     background: color.teal,
     padding: 10,
     borderRadius: 100,
